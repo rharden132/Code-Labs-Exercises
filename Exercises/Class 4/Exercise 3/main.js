@@ -8,6 +8,7 @@ function startTimer(){
     timerInterval = setInterval("timer()", 1000);
     timeLeft = timeInput.value;
     timeInput.style.display = "none";
+    startButton.style.display = "none";
 }
 function timer(){
     timeLeft--;
@@ -22,6 +23,7 @@ function stopTimer(){
     clearInterval(timerInterval);
     timerDisplay.innerText = "0";
     timeInput.style.display = "block";
+    startButton.style.display = "block";
 }
 
 startButton.addEventListener("click", startTimer);
